@@ -1,0 +1,99 @@
+/*
+* @Author: anchen
+* @Date:   2018-07-23 21:48:57
+* @Last Modified by:   anchen
+* @Last Modified time: 2018-07-26 19:46:30
+*/
+body{
+
+    margin:10px auto;
+    padding:20px;
+
+    font-family: Helvetica,Arial,sans-serif;
+    background-color:   rgb(215, 215, 215);
+    font-size:16pt;
+    width:1000px;
+
+    border:20px dashed red;
+    background-clip: padding-box;
+    border-image-source: url(border-image.png);
+
+    border-image-slice: 40;
+    border-image-repeat: round;
+}
+
+h1{
+    /*font-size:32px;*/
+    text-align: center;
+    text-shadow: 4px 4px 5px rgba(0,0,0,0.3);
+    /*font-weight: bold;*/
+}
+
+.tit{
+    padding-left:20px;
+    color:brown;
+    font-weight: bold;
+    background-color: blue;
+    /*background:url(https://mdn.mozillademos.org/files/13026/fire-ball-icon.png) no-repeat 99% center,linear-gradient(to bottom,lightblue,blue);*/
+
+    background-image: linear-gradient(to bottom,lightblue,blue);
+    /*background-size:25px 25px;*/
+
+    border-top-right-radius: 8px;
+}
+
+p{
+
+}
+
+.begin table{
+    margin:0 auto;
+    width:300px;
+}
+
+.chunk{
+    margin:10px auto;
+    width:800px;
+    border:2px solid black;
+    /*border-radius: 20px;*/
+    border-bottom-left-radius:20px;
+}
+
+table{
+    font-size: 16pt;
+    /*width:800px;*/
+    padding-left: 30px;
+}
+
+td{
+    height:20pt;
+}
+
+ul{
+    list-style-type: none;
+    font-size: 13pt;
+    /*width:800px;*/
+}
+
+a:link,a:visited{
+    display:block;
+    font-size: 14pt;
+    /*width:300px;*/
+    color:blue;
+    /*background-color: red;*/
+    /*text-align: left;*/
+    text-decoration:none;
+    padding:2px 0 2px 14px;
+}
+
+a:hover,a:active{
+    color:red;
+}
+
+li:nth-of-type(2n){
+    background-color:#ccc;
+}
+
+li:nth-of-type(2n+1){
+    background-color:#eee;
+}

@@ -1,0 +1,86 @@
+/*
+* @Author: anchen
+* @Date:   2018-07-29 13:56:16
+* @Last Modified by:   anchen
+* @Last Modified time: 2018-07-29 14:34:55
+*/
+/*
+* @Author: anchen
+* @Date:   2018-07-29 13:15:40
+* @Last Modified by:   anchen
+* @Last Modified time: 2018-07-29 13:55:01
+*/
+/*
+* @Author: anchen
+* @Date:   2018-07-29 12:55:35
+* @Last Modified by:   anchen
+* @Last Modified time: 2018-07-29 13:10:16
+*/
+body{
+    font-family: "Trebuchet MS",arial,sans-serif;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.show{
+    border: 2px solid black;
+    /*display:flex;*/
+}
+.tit{
+    /*width:300px;*/
+    color: white;
+    background-color: silver;
+
+    text-align: left;
+
+    padding: 20px;
+    padding-left: 30px;
+}
+h1{
+    margin:0;
+
+
+}
+.container{
+    display:table;
+    margin: 0 auto;
+}
+.basic{
+    /*display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;*/
+
+    display:table-row;
+}
+
+.basic h3,.basic p,.basic ul{
+    display:table-cell;
+}
+
+h2{
+    background-color: #ccc;
+    margin:0;
+    padding:30px;
+    border:1px solid rgb(245, 245, 245);
+}
+h3{
+
+}
+p{
+margin:0;
+padding:0;
+}
+span{
+    margin-right: 32px;
+}
+b{
+    margin-right: 16px;
+}
+ul{
+    list-style:none;
+    margin: 0;
+    padding-left: 0;
+    padding-top: 0;
+    margin-top: 0;
+}

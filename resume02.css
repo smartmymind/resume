@@ -1,0 +1,81 @@
+/*
+* @Author: anchen
+* @Date:   2018-07-29 13:15:40
+* @Last Modified by:   anchen
+* @Last Modified time: 2018-07-29 13:55:01
+*/
+/*
+* @Author: anchen
+* @Date:   2018-07-29 12:55:35
+* @Last Modified by:   anchen
+* @Last Modified time: 2018-07-29 13:10:16
+*/
+body{
+    font-family: "Trebuchet MS",arial,sans-serif;
+    font-size: 20px;
+    margin: 20px;
+    padding: 20px;
+}
+
+.show{
+    border: 2px solid black;
+    display:flex;
+}
+.tit{
+    width:300px;
+    color: white;
+    background-color: lightblue;
+
+    text-align: center;
+
+    margin-top: 0;
+    padding-top: 30px;
+}
+h1{
+
+
+    /*width: 300px;*/
+
+
+
+
+
+    /*float:left;*/
+}
+.container{
+    border: 2px solid red;
+    padding-left: 30px;
+
+    /*float:left;*/
+    /*background-color: red;*/
+
+    /*display: flex;*/
+}
+.basic{
+    /*border:2px solid blue;*/
+    /*background-color: cyan;*/
+}
+
+/*.clearfix{
+    clear: both;
+}*/
+h2{
+
+}
+h3{
+
+}
+p{
+
+}
+span{
+    margin-right: 32px;
+}
+b{
+    margin-right: 16px;
+}
+ul{
+    list-style:none;
+    margin: 0;
+    padding: 0;
+}
