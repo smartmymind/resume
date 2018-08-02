@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+<style>
+/*Just For Look*/
+body{
+    font-family: arial,sans-serif;
+    font-size: 30px;
+    margin: 0;
+    padding: 0;
+    background-color: #ccc;
+    width: 100%;
+}
+#header{
+    background-color: black;
+    color: white;
+    height: 80px;
+    padding-left: 200px;
+    padding-right: 200px;
+}
+#header .col1{
+    overflow: hidden;
+}
+/*头部布局*/
+#header .col1{
+    position: relative;
+    float: left;
+}
+#center1{
+    width: 960px;
+
+}
+#logo{
+    width: 200px;
+    margin-left: -960px;
+    right: 200px;
+    /*把logo居中*/
+    padding-left: 120px;
+    padding-top: 20px;
+}
+#navlt{
+    width: 200px;
+    margin-right: -960px;
+
+}
+/*li元素变为横向*/
+#navlt ul{
+    margin-top: 0;
+    padding-left: 0;
+    padding-top: 0;
+
+}
+#navlt ul li{
+    font-size: 16px;
+    display: inline-block;
+    float: left;
+    list-style-type: none;
+
+}
+#navlt ul li a{
+    color: white;
+    margin-right: 5px;
+}
+
+/*banner部分*/
+
+#banner{
+    background-color: #60AD3E;
+    width: 100%;
+}
+#banner ul{
+    margin: 0;
+    height: 300px;
+    position: relative;/*用的是相对位移好像有点危险*/
+    top: 230px;
+    left: 1100px;
+}
+#banner ul li{
+    list-style-type: none;
+    display: inline;
+
+    margin-right: 20px;
+}
+#banner ul li a{
+    text-decoration: none;
+    color: #ccc;
+    padding: 5px;
+    border: 1px solid black;
+}
+#banner ul li a:hover{
+    padding-top: 20px;
+}
+
+/*footer部分*/
+#footer{
+    width: 100%;
+    background-color: #666666;
+    height: 120px;
+    text-align: center;
+    padding-top: 20px;
+}
+
+/*主导航区域*/
+#center{
+    background-color: white;
+}
+.navbar{
+    border-bottom: 1px solid gray;
+
+}
+.navbar ul{
+    margin: 0;
+    padding: 0;
+    width: 960px;
+    padding-left: 200px;
+    padding-right: 200px;
+    height: 100px;
+
+}
+.navbar ul li{
+    background-color: silver;
+    list-style-type: none;
+    display: inline;
+    position: relative;
+    top: 45px;
+    padding: 20px;
+    margin-left: 0;
+    border: 1px solid gray;
+    border-top-left-radius: 20px;
+    border-top-right-radius: 20px;
+    border-bottom: white;
+}
+.navbar ul li a{
+    text-decoration: none;
+    color: black;
+}
+.navbar ul li:hover{
+    background-color: white;
+}
+
+/*flex布局 部分*/
+.wrapper{
+    width: 960px;
+    margin-top: 10px;
+    display: flex;
+    flex-flow: row wrap;
+    flex: 2 200px;
+    position: relative;
+    left: 200px;
+}
+.col{
+
+    padding: 80px;
+    border: 1px solid black;
+}
+
+</style>
+    </head>
+    <body>
+    <div id="header">
+        <div id="center1" class="col1">960px定宽居中</div>
+        <div id="logo" class="col1">Logo</div>
+
+        <div id="navlt" class="col1">
+            <ul>
+                <li><a href="#">Github</a></li>
+                <li><a href="#">Register</a></li>
+                <li><a href="#">Login</a></li>
+            </ul>
+        </div>
+    </div>
+
+    <div id="container">
+        <div id="banner">
+            <ul>
+                <li><a href="#">1</a></li>
+                <li><a href="#">2</a></li>
+                <li><a href="#">3</a></li>
+                <li><a href="#">4</a></li>
+
+            </ul>
+        </div>
+        <div id="center">
+            <div class="navbar">
+                <ul>
+                    <li><a href="#">HOME</a></li>
+                    <li><a href="#">PROFILE</a></li>
+                    <li><a href="#">ABOUT</a></li>
+                </ul>
+            </div>
+            <div class="wrapper">
+                <div class="col">This is Content 1</div>
+                <div class="col">MaybeContent2</div>
+                <div class="col">Content3</div>
+                <div class="col">Content4</div>
+                <div class="col">Content5</div>
+                <div class="col">Content6</div>
+                <div class="col">Content7</div>
+                <div class="col">Content8</div>
+                <div class="col">Content9</div>
+                <div class="col">Content10</div>
+            </div>
+        </div>
+    </div>
+
+    <div id="footer">© 2018 ife.baidu.com</div>
+    </body>
+</html>
