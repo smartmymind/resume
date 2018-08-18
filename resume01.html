@@ -2,12 +2,15 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="resume03.css">
+    <link rel="stylesheet" type="text/css" href="resume02.css">
+
 </head>
 <body>
 <div class="show">
     <div class="tit">
         <h1>简历</h1>
+        <button id="detail">详情</button>
+        <p id="content"></p>
     </div>
     <div class="container">
         <div class="basic">
@@ -69,5 +72,11 @@
         </div>
     </div>
 </div>
+
+<script>
+    document.getElementById("detail").onclick = function(){
+        document.getElementById("content").innerHTML = 'what do you want to know me ,today ,i read some books and i dont like someone ';
+    }
+    </script>
 </body>
 </html>
