@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+
+    <input id="name" onkeyup="whitchButton(event)" type="text" value="a">
+    <button id="submit-btn" onclick="whitch()">Submit</button>
+    <script>
+    function whitch(){
+        var name = document.getElementById('name').value;
+        console.log(name);
+    }
+    var input = document.querySelector('input');
+    function whitchButton(event){
+        if(event.keyCode===13){
+            whitch();
+        }else if(event.keyCode===27){
+
+            input.value = '';
+        }
+    }
+    </script>
+    </body>
+</html>

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+    /*由于搞错了input的性质，，radio和text，找了这个例子，input中带value值，获取实时输入框值方法*/
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        input{
+            display: block;
+            border:1px solid #090;
+            width: 200px;
+            height: 40px;
+            line-height: 40px;
+            font-size: 16px;
+            margin: 50px auto;
+            text-indent: 2em;
+        }
+        p{
+            width: 180px;
+            padding-left: 10px;
+            padding-right: 10px;
+            height: 40px;
+            background: #090;
+            color: #fff;
+            line-height: 40px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <input type="text" id='btn' disable='disable' value="123">
+    <p id="title"></p>
+    <script>
+        var oBtn = document.getElementById('btn');
+        var oTi = document.getElementById('title');
+        if('oninput' in oBtn){
+                oBtn.addEventListener("input",getWord,false);
+            }else{
+                oBtn.onpropertychange = getWord;
+            }
+        // var ie = !!window.ActiveXObject;
+     //    if(ie){
+     //        oBtn.onpropertychange = getWord;
+     //    }else{
+     //        oBtn.addEventListener("input",getWord,false);
+     //    }
+        function getWord(){
+            oTi.innerHTML = oBtn.value;
+        }
+
+
+        //
+        //
+    </script>
+
+
+
+</body>
+</html>
+

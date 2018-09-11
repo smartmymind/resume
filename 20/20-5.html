@@ -1,0 +1,45 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>无标题文档</title>
+    <style>
+        #anidem{
+            width:480px;
+            height:480px;
+            background:url(img/erik_ce204002.jpg) no-repeat;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="anidem"></div>
+    <script>
+
+
+
+
+    var anidem = document.getElementById("anidem");
+
+
+
+    var x=0
+    var y= 0
+    var  tsid = 0
+    setInterval(function(){
+
+        anidem.style.backgroundPosition = ((-480*x)+"px "+(y)+"px");
+
+        // count++;
+        // if(count>=7){
+            // count=0
+            y = -480*tsid;
+            tsid++;
+            if(tsid>=17){
+                tsid=0;
+            }
+        // }
+    },100)
+    </script>
+</body>
+</html>
