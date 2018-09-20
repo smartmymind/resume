@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body>
+    <script>
+    var menuArr = [
+        [1, "Area1", -1],
+        [2, "Area2", -1],
+        [3, "Area1-1", 1],
+        [4, "Area1-2", 1],
+        [5, "Area2-1", 2],
+        [6, "Area2-2", 2],
+        [7, "Area1-2-3", 4],
+        [8, "Area2-2-1", 6],
+    ];
+    // //第一种方法，土方一个个带进去，
+    // //不过要对应，不然很容易出错
+    // var menuObject = {};
+    // menuArr.forEach((current,index)=>{
+    //     if(current[2]==-1){
+    //         menuObject[current[0]]={
+    //             "name":current[1],
+    //             "subMenu":{}
+    //         }
+    //     }
+    //     if(current[2]==1){
+    //         menuObject["1"]["subMenu"][current[0]]={
+    //             "name":current[1],
+    //             "subMenu":{}
+    //         }
+    //     }
+    //     if(current[2]==2){
+    //         menuObject["2"]["subMenu"][current[0]]={
+    //             "name":current[1],
+    //             "subMenu":{}
+    //         }
+    //     }
+    //     if(current[2]==4){
+    //         menuObject["1"]["subMenu"]["4"]["subMenu"][current[0]]={
+    //             "name":current[1],
+    //             "subMenu":{}
+    //         }
+    //     }
+    //     if(current[2]==6){
+    //         menuObject["2"]["subMenu"]["6"]["subMenu"][current[0]]={
+    //             "name":current[1],
+    //             "subMenu":{}
+    //         }
+    //     }
+    // })
+
+
+    // console.log(menuObject);
+
+// //方法二
+// //伤脑筋，修改了下，不懂为什么参数可以这样设置，感觉看着很乱
+    var menuObject = {};//存储对象
+    var menuSubArr = [];//存储数组第一层值
+    var menuMainObject = {};//最终结果
+    for(var i=0;i<menuArr.length;i++){
+        //根元素
+        if(menuArr[i][2]===-1){
+            menuSubArr.push(menuArr[i][0]);
+        }
+        //存储对象(放到挂载后面无法实现该功能)
+        menuObject[menuArr[i][0]]={
+            name:menuArr[i][1],
+            subMenu:{}
+        };
+
+        //挂载到相应的父元素中
+        if(menuArr[i][2]!==-1){
+            menuObject[menuArr[i][2]].subMenu[menuArr[i][0]]=menuObject[menuArr[i][0]];
+        }
+
+        //最后结果
+        menuMainObject[menuSubArr[i]]=menuObject[menuSubArr[i]];
+    }
+
+    for(var i in menuObject){
+        //删除空的的副菜单
+        // console.log(i);
+        // 之前有个代码例子是i为对象名？？这个好像也是？？
+        if(JSON.stringify(menuObject[i].subMenu)==="{}"){
+            delete menuObject[i].subMenu;
+        }
+    }
+
+    console.log(menuMainObject);
+    </script>
+    </body>
+</html>
