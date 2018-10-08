@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+    </head>
+    <body onload="birth()">
+        <div id="txt"></div>
+    <script>
+    function birth(){
+        var d = new Date();
+        // console.log(d);
+        var y = d.getFullYear();
+        var mon = d.getUTCMonth();
+        var date = d.getDate();
+
+
+// console.log(weekday(d.getDay()));
+        // var dd = ;
+        // console.log(dd);
+        var h = d.getHours();
+        var m = d.getMinutes();
+        var s = d.getSeconds();
+
+        mon = checkTime(mon);
+        h = checkTime(h);
+        m = checkTime(m);
+        s = checkTime(s);
+
+        document.getElementById('txt').innerHTML = y+'年'+mon+'月'+date+'日'+weekday(d.getDay())+h+':'+m+':'+s;
+        // format();
+        //这个要求也封装起来，可是封装要怎么下手啊？？
+        // console.log(y+'年'+mon+'月'+date+'日'+week[d.getDay()]+h+'时'+m+'分'+s+'秒');
+
+        t = setTimeout('birth()',500);
+    }
+function weekday(w){
+    var week = new Array(7);
+    week[0] = "星期日";
+    week[1] = "星期一";
+    week[2] = "星期二";
+    week[3] = "星期三";
+    week[4] = "星期四";
+    week[5] = "星期五";
+    week[6] = "星期六";
+    return week[w];
+}
+
+function checkTime(i)
+{
+if (i<10)
+  {i="0" + i}
+  return i
+}
+function format(){
+    return
+}
+    </script>
+    </body>
+</html>

@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <script type="text/javascript" src="jquery-1.11.3.min.js"></script>
+    </head>
+    <body>
+        <div class="wrapper">
+            <input id="email-input" type="text">
+            <ul id="email-sug-wrapper" class="email-sug"></ul>
+            <div id="tip"></div>
+        </div>
+
+        <script>
+        // 邮箱后缀List参考
+        var postfixList = ['163.com', 'gmail.com', '126.com', 'qq.com', '263.net'];
+
+        $(document).ready(function(){
+            $('#email-input').on('input propertychange', function(){
+                var emailInputObj = document.getElementById('email-input');
+                //这个的作用是，输入空格后马上被trim掉
+                emailInputObj.value = trim(emailInputObj.value);
+                var count = $(this).val().length;
+                if(count==0){
+                    //提示框不出现
+
+                }else{
+                    //提示框出现
+                    for(var i=0;i<postfixList.length;i++){
+console.log(count);//程序会跳进来
+                        var emailInputDom = document.createElement('li');
+                        emailInputDom.value = emailInputObj.value+postfixList[i];
+                        emailInputDom.textContent = emailInputObj.value+postfixList[i];
+                        emailInputObj.appendChild(emailInputDom);
+                        // $('.email-sug').li(emailInputObj.value+postfixList[i]);
+                    }
+                }
+                $('#tip').html("已输入"+ count +" 个字。");
+            });
+        });
+
+        // console.log(emailInputObj.value);
+        // console.log(postfixList[0]);
+
+
+        // var ei = trim(emailInputObj.value);//测试时出现推迟现象，晚一步出现
+
+
+        //去除字符串str头尾的空格
+        function trim(str){
+            if(str == null) return "" ;
+            // 去除后面的空格
+            while( str.charAt(str.length-1)  == ' ' )
+            {
+                str = str.substring(0,str.length-1);
+            }
+            // 去除前面所有的空格
+            while( str.charAt(0)  == ' ' )
+            {
+                str = str.substring(1,str.length);
+            }
+            return str ;
+        }
+        </script>
+    </body>
+</html>
